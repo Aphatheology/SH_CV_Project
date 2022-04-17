@@ -1,38 +1,131 @@
+:root {
+    --pryorange: hsl(25, 97%, 53%);
+    --nuewhite: hsl(0, 0%, 100%);
+    --neulgrey: hsl(216, 12%, 30%);
+    --neumgrey: hsl(216, 12%, 54%);
+    --neudblue: hsl(213, 19%, 18%);
+    --neuvdblue: hsl(216, 12%, 8%);
+}
+
 .App {
-  text-align: center;
+  background-color: var(--neuvdblue);
+  padding: 75px 0px 20px;
+  min-height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.about, .education, .experience, .socialmedia{
+    padding: 50px;
+    width: 500px;
+    background-color: var(--neudblue);
+    color: var(--nuewhite);
+    margin: 10px auto 75px;
+    position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.socialmedia {
+    margin-bottom: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.about::before {
+    content: "about";
+    font-weight: bolder;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    position: absolute;
+    top: -40px;
+    font-size: 50px;
+    background-color: var(--nuewhite);
+    color: var(--pryorange);
+    padding: 10px 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.education::before {
+    content: "Education";
+    font-weight: bolder;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    position: absolute;
+    top: -40px;
+    font-size: 50px;
+    background-color: var(--nuewhite);
+    color: var(--pryorange);
+    padding: 10px 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.experience::before {
+    content: "Experience";
+    font-weight: bolder;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    position: absolute;
+    top: -40px;
+    font-size: 50px;
+    background-color: var(--nuewhite);
+    color: var(--pryorange);
+    padding: 10px 25px;
+}
+
+.socialmedia::before {
+    content: "Connect";
+    font-weight: bolder;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    position: absolute;
+    top: -40px;
+    font-size: 50px;
+    background-color: var(--nuewhite);
+    color: var(--pryorange);
+    padding: 10px 25px;
+}
+
+h2, h3 {
+    color: var(--pryorange);
+    margin: 25px 0px 10px;
+    text-align: justify;
+}
+
+p {
+    text-align: justify;
+    line-height: 2;
+}
+
+p i, .socialmedia a i {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+a {
+    color: var(--pryorange);
+}
+
+.socialmedia a {
+    display: inline-block;
+    margin: 0px 10px;
+    width: 25px;
+    height: 25px;
+}
+
+@media (max-width: 500px) {
+    .about, .education, .socialmedia {
+        padding: 50px 20px;
+        width: 90%;
+    }
+
+    h3, h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .about::before, .education::before, .experience::before, .socialmedia::before {
+        font-size: 25px;
+        top: -20px;
+        text-align: center;
+        padding: 10px 25px;
+    }
 }
